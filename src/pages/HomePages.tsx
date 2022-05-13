@@ -32,7 +32,7 @@ const HomePages = () => {
 
   const handleDelete = (movieId: string) => {
     dispatch(deleteMovie({ id: movieId }));
-    toast.success("Movie Deleted")
+    toast.success("Movie deleted successfully")
   }
 
   const handleFilterChange = (filters: string[]) => {
