@@ -55,7 +55,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
       <div className="flex flex-col overflow-hidden items-center bg-white rounded-lg border shadow-md p-4">
         <div className="flex flex-col h-full leading-normal w-full gap-3">
           <img
-            className="w-full h-[24rem] rounded-md ease-in-out duration-300 scale-100 hover:scale-105"
+            className="w-full h-[18rem] rounded-md ease-in-out duration-300 scale-100 md:h-[20rem] hover:scale-105"
             src={require(`../../assets/images/${movie.image}`)}
             alt=""
           ></img>
@@ -63,12 +63,14 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
           <h5 className="font-bold text-xl tracking-tight text-gray-900 truncate">
             {movie.title}
           </h5>
+
           <div className="text-xs text-gray-700 dark:text-gray-400">
             <span>
               <span className="font-bold">Category : </span>
               <span className="font-medium">{movie.category}</span>
             </span>
           </div>
+
           <div className="flex flex-col justify-between text-xs mt-6">
             <div className="flex justify-between">
               <div
@@ -97,6 +99,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
               </div>
             </div>
           </div>
+
           <div className="mt-2" onClick={onDeleteClick}>
             <Button
               title="Delete"

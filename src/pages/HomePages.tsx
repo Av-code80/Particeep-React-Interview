@@ -15,7 +15,7 @@ import Pagination from "../components/Pagination/Pagination";
 const perPages = [4, 9, 12]
 
 const HomePages = () => {
-  const [pageSize, setPageSize] = useState<number>(perPages[0])
+  const [pageSize, setPageSize] = useState<number>(perPages[2] || perPages[0])
   const [movies, setMovies] = useState<MovieType[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -60,7 +60,7 @@ const HomePages = () => {
     const lastPageIndex = firstPageIndex + pageSize;
     const paged = movies.slice(firstPageIndex, lastPageIndex);
     return (
-      paged.length &&
+      !!paged && paged.length > 0 &&
       paged.map((movie: MovieType) => {
         return (
           <MovieCard
@@ -92,17 +92,18 @@ const HomePages = () => {
             </select>
           </div>
         </div>
-        <div className="w-full mt-6 grid 2xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-          {renderMovies()}
-        </div>
-        <Pagination
-          page={currentPage}
-          totalPages={Math.ceil(movies.length / pageSize)}
-          handlePagination={handlePages}
-        />
-
+        {!!movies && movies.length > 0 && <>
+          <div className="w-full mt-6 grid 2xs:grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            {renderMovies()}
+          </div>
+          <Pagination
+            page={currentPage}
+            totalPages={Math.ceil(movies.length / pageSize)}
+            handlePagination={handlePages}
+          />
+        </>}
       </div>
-    </div >
+    </div>
   );
 };
 
