@@ -28,7 +28,7 @@ const Filter: React.FC<FilterProps> = ({ items, handleFilterChange }) => {
     }
 
     return (
-        <div className="flex flex-row gap-3 items-center">
+        <div className="flex flex-row 2xs:flex-wrap gap-3 items-center">
             Filters :
             {items.map(filter => {
                 return <div key={filter} className={cn("text-center bg-slate-300 p-2 rounded-md cursor-pointer", filters.filter(x => x === filter).length == 1 && "bg-slate-400")} onClick={() => onFilterChange(filter)}>

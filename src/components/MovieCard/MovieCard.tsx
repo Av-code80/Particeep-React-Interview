@@ -55,7 +55,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
       <div className="flex flex-col overflow-hidden items-center bg-white rounded-lg border shadow-md p-4">
         <div className="flex flex-col h-full leading-normal w-full gap-3">
           <img
-            className="w-full h-[24rem] rounded-md ease-in-out duration-300 scale-100 hover:scale-105"
+            className="w-full h-[20rem] rounded-md ease-in-out duration-300 scale-100 hover:scale-105"
             src={require(`../../assets/images/${movie.image}`)}
             alt=""
           ></img>
