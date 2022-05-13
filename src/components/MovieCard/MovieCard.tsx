@@ -55,7 +55,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
       <div className="flex flex-col overflow-hidden items-center bg-white rounded-lg border shadow-md p-4">
         <div className="flex flex-col h-full leading-normal w-full gap-3">
           <img
-            className="w-full h-[24rem] rounded-md"
+            className="w-full h-[24rem] rounded-md ease-in-out duration-300 scale-100 hover:scale-105"
             src={require(`../../assets/images/${movie.image}`)}
             alt=""
           ></img>
@@ -71,13 +71,25 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
           </div>
           <div className="flex flex-col justify-between text-xs mt-6">
             <div className="flex justify-between">
-              <div onClick={onLikeClick} className={cn("flex justify-between items-center cursor-pointer", !!action && action.name == "like" && "text-blue-400")}>
+              <div
+                onClick={onLikeClick}
+                className={cn(
+                  "flex justify-between items-center cursor-pointer",
+                  !!action && action.name == "like" && "text-blue-400"
+                )}
+              >
                 <span className="mr-1">
                   <ThumbsUp className="w-6 h-6" />
                 </span>
                 <span className="text-lg">{movie.likes}</span>
               </div>
-              <div onClick={onDisLikeClick} className={cn("flex justify-between items-center cursor-pointer", !!action && action.name == "disLike" && "text-red-400")}>
+              <div
+                onClick={onDisLikeClick}
+                className={cn(
+                  "flex justify-between items-center cursor-pointer",
+                  !!action && action.name == "disLike" && "text-red-400"
+                )}
+              >
                 <span className="text-lg mr-1">{movie.dislikes}</span>
                 <span>
                   <ThumbsDown className="w-6 h-6" />
@@ -86,7 +98,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, handleLike, handleDisLike,
             </div>
           </div>
           <div className="mt-2" onClick={onDeleteClick}>
-            <Button title="Delete" customClassName="p-2 bg-red-400 w-full text-white" />
+            <Button
+              title="Delete"
+              customClassName="p-2 bg-red-400 w-full text-white"
+            />
           </div>
         </div>
       </div>
