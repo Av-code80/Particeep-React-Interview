@@ -60,7 +60,6 @@ const MovieCard: React.FC<MovieCardProps> = ({
             src={require(`../../assets/images/${movie.image}`)}
             alt=""
           ></img>
-
           <h5 className="font-bold text-xl tracking-tight text-gray-900 truncate">
             {movie.title}
           </h5>
@@ -100,11 +99,10 @@ const MovieCard: React.FC<MovieCardProps> = ({
               </div>
             </div>
           </div>
-
           <div className="mt-2" onClick={onDeleteClick}>
             <Button
               title="Delete"
-              customClassName="p-2 bg-red-400 w-full text-white"
+              customClassName="p-2 bg-red-400 hover:bg-red-300 w-full text-white"
             />
           </div>
         </div>
