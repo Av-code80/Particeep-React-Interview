@@ -18,7 +18,6 @@ Prenez des initiatives, il y a des points bonus si
 - C'est joli
 - Vous utilisez correctement REDUX
 - Il y a une attention aux détails
-* /!\ La suppression du comportement asynchrone dans movies.js entraînera une annulation du test.
 
 
 ## How Run this project :
