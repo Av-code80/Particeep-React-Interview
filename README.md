@@ -1,7 +1,8 @@
+# Description
 
-# Description :
-# Ce projet est basé sur les technologies suivantes: React-TypeScript, Redux Toolkit, Promise, Tailwaind.
-- Lister les films dans des cartes avec: le titre en gras, la catégorie et une jauge type Youtube indiquant le ratio likes/dislikes. Les cartes doivent être côtes à côtes et responsive. Càd que lorsque la fenêtre se réduit, les cartes sautent à la ligne suivante.
+# Ce projet est basé sur les technologies suivantes: React-TypeScript, Redux Toolkit, Tailwaind.
+
+- Lister les films dans des cartes avec: le titre en gras, la catégorie et une jauge type Youtube indiquant le ratio likes/dislikes. Les cartes doivent être côtes à côtes et responsive. Lorsque la fenêtre se réduit, les cartes sautent à la ligne suivante.
 
 - Ajouter un bouton dans les cartes permettant de supprimer celle-ci
 
@@ -12,17 +13,15 @@
 - Ajouter un système de pagination avec les fonctionnalités suivantes:
 
 - Boutons précédent/suivant
-Choix du nombre d'élements affichés par page (4, 8 ou 12).
-Prenez des initiatives, il y a des points bonus si
+  Choix du nombre d'élements affichés par page (4, 8 ou 12). Prenez des initiatives!
 
 - C'est joli
 - Vous utilisez correctement REDUX
 - Il y a une attention aux détails
-* /!\ La suppression du comportement asynchrone dans movies.js entraînera une annulation du test.
 
+## How Run this project
 
-## How Run this project :
-# Getting Started with Create React App :
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
