@@ -1,3 +1,4 @@
+import { error } from "console";
 import MovieType from "./types/MoviesType";
 
 const movies: MovieType[] = [
@@ -84,5 +85,5 @@ const movies: MovieType[] = [
 ];
 
 export default new Promise<MovieType[]>((resolve, reject) =>
-  setTimeout(resolve, 100, movies)
+  setTimeout(resolve, 100, movies, reject)
 );
